@@ -1,0 +1,34 @@
+{% extends "layout.html" %}
+{% block content %}
+<div class="container">
+    <div class="row justify-content-center align-items-center">
+        <h2 id="downloadHeader">
+            Choose the Options for Your Video
+        </h2>
+    </div>
+    <div class="row justify-content-center">
+        <div class="col-8">
+            <form action="#" method="POST">
+                <div class="form-group">
+                    <label for="file_name">视频名字</label>
+                    <input class="form-control" type="text" name="fileName" id="file_name" value="{{ name }}">
+                </div>
+                <div class="form-group">
+                    <label for="version_selector">视频质量</label>
+                    <select class="form-control" id="version_selector" name="qualitySelector">
+                        <option value="1">360p</option>
+                        <option value="2">720p</option>z 
+                    </select>
+                </div>
+                <input class="btn btn-primary" type="submit" name="submit_button" value="Download">
+            </form>
+        </div>
+    </div>
+
+
+
+
+    
+    
+</div>
+{% endblock %}

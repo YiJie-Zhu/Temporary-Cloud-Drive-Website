@@ -1,0 +1,86 @@
+{% extends "layout.html" %}
+{% block content %}
+<div class="homeback1">
+    <div style="padding-top: 20px;" class="container">
+        {% with messages = get_flashed_messages(with_categories=true) %}
+        {% if messages %}
+            {% for category, message in messages %}
+            <div class="alert alert-{{ category }} alert-dismissible fade show" role="alert">
+            <span> {{ message }} </span>
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+            </div>
+            {% endfor %}
+        {% endif %}
+        {% endwith %}
+    </div>
+    <div class="row justify-content-center align-items-center">
+        <div class="col-10 homebox1">
+            {% if user %}
+                <h1 style="font-size:8vw" class="text-center">
+                   Welcome<br>{{ user }}<br>to AREN
+                </h1>
+            {% else %}
+                <h1 style="font-size:8vw" class="text-center">
+                    Welcome to AREN
+                </h1>
+            {% endif %}
+        </div>
+    </div>
+    <div class="row align-items-center homerow1">
+        <div class="col-12 col-lg-4">
+            <div style="border: 2px solid red" class="homesubbox1">
+                <h1 class="text-center homeLarge">
+                    About This Website
+                </h1>
+                <p class="homeSmall">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla semper a sapien aliquam pellentesque. Maecenas accumsan porta sapien, at dignissim urna rutrum et. Aliquam congue turpis at urna tincidunt, a egestas augue tristique. Donec in ullamcorper turpis. Aenean nec molestie metus. Donec non urna rhoncus,
+                </p>
+            </div>
+        </div>
+        <div class="col-12 col-lg-4">
+            <div style="border: 2px solid Blue" class="homesubbox1">
+                <h1 class="text-center homeLarge">
+                    About Me
+                </h1>
+                <p class="homeSmall">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla semper a sapien aliquam pellentesque. Maecenas accumsan porta sapien, at dignissim urna rutrum et. Aliquam congue turpis at urna tincidunt, a egestas augue tristique. Donec in ullamcorper turpis. Aenean nec molestie metus. Donec non urna rhoncus,
+                </p>
+            </div>
+        </div>
+        <div class="col-12 col-lg-4">
+            <div style="border: 2px solid yellow" class="homesubbox1">
+                <h1 class="text-center homeLarge">
+                    About My Goals
+                </h1>
+                <p class="homeSmall">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla semper a sapien aliquam pellentesque. Maecenas accumsan porta sapien, at dignissim urna rutrum et. Aliquam congue turpis at urna tincidunt, a egestas augue tristique. Donec in ullamcorper turpis. Aenean nec molestie metus. Donec non urna rhoncus,
+                </p>
+            </div>
+        </div>
+
+    </div>
+</div>
+<div class="homeback2">
+    <div class="row align-items-center justify-content-center homerow1">
+        <div class="col-12 col-lg-4">
+            <a href="{{ url_for('youtube') }}">
+                <img style="height: 300px; width: 423px;" src="../static/img/youtubeLogo.png" class="center">
+            </a>
+            
+        </div>
+        <div class="col-12 col-lg-8 order-lg-first">
+            <h1 style="color: white; font-size: 60;" class="text-center">
+                Youtube Downloader
+            </h1>
+                <p style="color: rgb(209, 209, 209);" class="text-center">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla semper a sapien aliquam pellentesque. Maecenas accumsan porta sapien, at dignissim urna rutrum et. Aliquam congue turpis at urna tincidunt, a egestas augue tristique. Donec in ullamcorper turpis. Aenean nec molestie metus. Donec non urna rhoncus,
+                </p>
+            <a>
+                
+            </a>
+        </div>
+    </div>
+</div>
+{% endblock %}

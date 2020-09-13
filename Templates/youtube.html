@@ -1,0 +1,36 @@
+{% extends "layout.html" %}
+{% block content %}
+
+
+
+    <div class="row justify-content-center align-items-start">
+        <div class="col-12 textbox1" >
+            <h1 class="text-center">
+                Youtube Video Downloader
+            </h1>
+            <p class="text-center">
+                Enter the link of any Youtube Video to download it locally, free and ad-free. Max size of video is 500mb.
+            </p>
+        </div>
+    </div>
+
+    <div class="row justify-content-center ">
+        <div class="col-8 youtubeForm">
+            <form method="POST" action="/youtube">
+                <h2>
+                    输入链接
+                </h2>
+                <div class="form-group">
+                    <input class="form-control" type="text" name="link"> 
+                </div>
+                    
+                <input class="btn btn-primary" type="submit" value="Next">
+            </form>
+          
+        </div>
+    </div>
+
+
+
+    
+{% endblock %}
